@@ -101,6 +101,8 @@ nrow(activity[is.na(activity$steps),])
 ## [1] 2304
 ```
 
+**Stratergy for Imputing missing values**
+
 For removing the missing values we find the mean steps for that interval over all the days and replace the missing value with that
 
 ```r

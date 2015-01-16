@@ -59,6 +59,8 @@ Total number of missing values
 nrow(activity[is.na(activity$steps),])
 ```
 
+**Stratergy for Imputing missing values**
+
 For removing the missing values we find the mean steps for that interval over all the days and replace the missing value with that
 ```{r echo=TRUE}
 group_by_time <- DT[, mean(steps, na.rm=TRUE), by=interval ]

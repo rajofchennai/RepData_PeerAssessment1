@@ -106,6 +106,7 @@ ggplot(group_by_time, aes(x = interval, y = nosteps)) + geom_line()</code></pre>
 <p>Total number of missing values</p>
 <pre class="r"><code>nrow(activity[is.na(activity$steps),])</code></pre>
 <pre><code>## [1] 2304</code></pre>
+<p><strong>Stratergy for Imputing missing values</strong></p>
 <p>For removing the missing values we find the mean steps for that interval over all the days and replace the missing value with that</p>
 <pre class="r"><code>group_by_time &lt;- DT[, mean(steps, na.rm=TRUE), by=interval ]
 setnames(group_by_time, &quot;V1&quot;, &quot;nosteps&quot;)</code></pre>
